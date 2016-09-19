@@ -1,8 +1,0 @@
-spring版本為4.3.1
-hibernate 版本為5.2.1
-rich faces 版本為4.5.17(由primefaces取代，目前為並行)
-primefaces版本為6.0
-
-另templateproject增加primefaces extension 6.0 lib
-所以又新增幾個元件，可參考下面網址的demo
-http://www.primefaces.org/showcase-ext/views/home.jsf
