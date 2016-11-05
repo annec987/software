@@ -17,6 +17,15 @@ mvnadmin
 Pablo.SJ.Shen@pcalife.com.tw
 @tl@ssi@n0866
 
+AAABcw0ODAoPeNptUdFOgzAUfe9XNPFFk0EK2XQuaeIGPGyZjACaaHwp7G6rgZa0Zerf28FIptlbz
+723555z7k1+aPGmNNgnmJDZeDybTHAQ5hZ796hgdSGlu+YlCA3RlhsuBY3iPEqTdJlFw0Dc1gWoz
+W7RwbUsWTXfgzCaOh4KpDCsNDGrgSasqCTODiBQ0qrywDSEzAA9bXM84nhTNCz7brj66ZqtqHjND
+WwHquiZ8Yo2Jy5Xf7ra0j01diffgVvK2jVfKAN1BLUM6eJ9uXAWwWTqrHxv7ngvb+mg2jLxI1CjW
+rhuJIVaGjg7IddnkooJTT3yL6v8p4HOcZbPUxsXspKFAcFEeWnN+n7469tKXi/DLIqd6dgn04dHZ
+N/0Em/UngmuWXeLJJivcxQo6OCfLH2Cqp7zFZQ+DfsoBF0q3nRfe/349mWIF3eHw73fEY4l7gPoK
+yPsEbyShb77mOHMMGVA4bNoFB1Z1faKdqyyhV+qa8h5MCwCFDem6fowxzEZmr0/NS3IMgSJnGwnA
+hRs44NtG6gArucAwT6nJmiQO2i/jQ==X02i6
+
 SELECT
  'DROP TABLE "cidb"."' || a.tablename || '" CASCADE;'
 FROM
