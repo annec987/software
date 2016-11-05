@@ -1,0 +1,14 @@
+rm -rf /maven/bitbucket-home
+rm -rf /maven/atlassian-bitbucket-4.10.1/
+mkdir /maven/bitbucket-home
+cd /maven/
+tar -zxvf atlassian-bitbucket-4.10.1.tar.gz
+
+cd /maven/atlassian-bamboo-5.13.2/atlassian-bamboo/WEB-INF/classes modify bamboo-init.properties
+
+/maven/maven/atlassian-bitbucket-4.10.1/bin/start-bitbucket.sh
+/maven/maven/atlassian-bitbucket-4.10.1/bin/stop-bitbucket.sh
+
+netstat -tulpn
+
+http://vtwliferepo.pru.intranet.asia:7990/
