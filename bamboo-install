@@ -14,7 +14,8 @@ netstat -tulpn
 http://vtwliferepo.pru.intranet.asia:8085/
 
 mvnadmin
-mvnadmin1234
+Pablo.SJ.Shen@pcalife.com.tw
+@tl@ssi@n0866
 
 SELECT
  'DROP TABLE "cidb"."' || a.tablename || '" CASCADE;'
