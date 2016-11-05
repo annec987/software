@@ -1,0 +1,42 @@
+rm -rf /maven/bamboo-home
+rm -rf /maven/atlassian-bamboo-5.13.2/
+mkdir /maven/bamboo-home
+cd /maven/
+tar -zxvf atlassian-bamboo-5.13.2.tar.gz
+
+cd /maven/atlassian-bamboo-5.13.2/atlassian-bamboo/WEB-INF/classes modify bamboo-init.properties
+
+/maven/atlassian-bamboo-5.13.2/bin/start-bamboo.sh
+/maven/atlassian-bamboo-5.13.2/bin/stop-bamboo.sh
+
+netstat -tulpn
+
+http://vtwliferepo.pru.intranet.asia:8085/
+
+jdbc:postgresql://10.136.61.135:5006/cidb
+cidb_svc
+cidb_svc_Jul2016
+
+
+AAABlQ0ODAoPeNp9kUFP4zAQhe/+FZb2wh4S2aVAVSnSlsSLgtq0arJdDlxMOqVGqWONnbL8e9wkS
+EFbuGUUz3vve/Oj2Dc0q4+UXVI2mo6vpldjGicFHTF+TZ4RQO9rYwDDuSpBWxBb5VStI5EVYr1ap
+7kgWXN4Alzu/lhAG3FG4lo7WbpMHiBayaeqpvkeNFk1WO6lhUQ6iE76AWcBn5BeuXgz0K7Ey8VCr
+ON0Nv/4Jf4ZhW/tXqMrdVAOth8uYiFVFZmTTWhfQuudfplSVmoHYVkfQvdKcsAjYJpEt7/53yCZP
+YiA3202wV12w8mLQhkarLdN6cLTENh6514lQujV1REihw10z77u4ExT53h8Vu1AS10OmXwXN30X3
+6T5r+bex3PN0yQXWTAZj9hkwoj/jobzN6K5k+gAO8YlPkutrGzhVvFsXpAYoR0HN+MBuyRV573xU
+U6PR58KAM+IBpXtu0vAlqhMK3ufrmc07+3pRXean5Qz2nI9TmkfifZ4XfqvTnGu5GGU4Z44yqrp4
+Hay8srvYmYGhTAsAhRjoAdQnbf//OYkC1NYVBHe3h6EogIUbD4/YYkoUxn6AJZbm2jC7OurlvA=X
+02jj
+
+
+Pablo.SJ.Shen
+Pablo.SJ.Shen@pcalife.com.tw
+@tl@ssi@n0866
+
+SELECT
+ 'DROP TABLE "jira"."' || a.tablename || '" CASCADE;'
+FROM
+ pg_catalog.pg_tables a
+WHERE
+ schemaname != 'pg_catalog'
+AND schemaname = 'jira';
