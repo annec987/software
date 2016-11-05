@@ -29,3 +29,11 @@ Hay8srvYmYGhTAsAhRjoAdQnbf//OYkC1NYVBHe3h6EogIUbD4/YYkoUxn6AJZbm2jC7OurlvA=X
 Pablo.SJ.Shen
 Pablo.SJ.Shen@pcalife.com.tw
 @tl@ssi@n0866
+
+SELECT
+ 'DROP TABLE "jira"."' || a.tablename || '" CASCADE;'
+FROM
+ pg_catalog.pg_tables a
+WHERE
+ schemaname != 'pg_catalog'
+AND schemaname = 'jira';
