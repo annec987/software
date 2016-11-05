@@ -4,7 +4,7 @@ mkdir /maven/bitbucket-home
 cd /maven/
 tar -zxvf atlassian-bitbucket-4.10.1.tar.gz
 
-cd /maven/atlassian-bamboo-5.13.2/atlassian-bamboo/WEB-INF/classes modify bamboo-init.properties
+cd /maven/atlassian-bitbucket-4.10.1/bin/ modify set-bitbucket-home.sh
 
 /maven/maven/atlassian-bitbucket-4.10.1/bin/start-bitbucket.sh
 /maven/maven/atlassian-bitbucket-4.10.1/bin/stop-bitbucket.sh
