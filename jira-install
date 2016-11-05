@@ -3,6 +3,10 @@ rm -rf /maven/atlassian-jira-software-7.2.3-standalone/
 mkdir /maven/jirasoftware-home
 cd /maven/
 tar -zxvf atlassian-jira-software-7.2.3.tar.gz
+
+cd /maven/atlassian-jira-software-7.2.3-standalone/conf modify server.xml
+cd /maven/atlassian-jira-software-7.2.3-standalone/atlassian-jira/WEB-INF/classes modify jira-application.properties
+
 /maven/atlassian-jira-software-7.2.3-standalone/bin/start-jira.sh
 /maven/atlassian-jira-software-7.2.3-standalone/bin/stop-jira.sh
 
