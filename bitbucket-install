@@ -6,8 +6,8 @@ tar -zxvf atlassian-bitbucket-4.10.1.tar.gz
 
 cd /maven/atlassian-bitbucket-4.10.1/bin/ modify set-bitbucket-home.sh
 
-/maven/maven/atlassian-bitbucket-4.10.1/bin/start-bitbucket.sh
-/maven/maven/atlassian-bitbucket-4.10.1/bin/stop-bitbucket.sh
+/maven/atlassian-bitbucket-4.10.1/bin/start-bitbucket.sh
+/maven/atlassian-bitbucket-4.10.1/bin/stop-bitbucket.sh
 
 netstat -tulpn
 
