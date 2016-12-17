@@ -14,21 +14,6 @@ netstat -tulpn
 
 http://vtwliferepo.pru.intranet.asia:5050/
 
-AAABlQ0ODAoPeNp9kUFP4zAQhe/+FZb2wh4S2aVAVSnSlsSLgtq0arJdDlxMOqVGqWONnbL8e9wkS
-EFbuGUUz3vve/Oj2Dc0q4+UXVI2mo6vpldjGicFHTF+TZ4RQO9rYwDDuSpBWxBb5VStI5EVYr1ap
-7kgWXN4Alzu/lhAG3FG4lo7WbpMHiBayaeqpvkeNFk1WO6lhUQ6iE76AWcBn5BeuXgz0K7Ey8VCr
-ON0Nv/4Jf4ZhW/tXqMrdVAOth8uYiFVFZmTTWhfQuudfplSVmoHYVkfQvdKcsAjYJpEt7/53yCZP
-YiA3202wV12w8mLQhkarLdN6cLTENh6514lQujV1REihw10z77u4ExT53h8Vu1AS10OmXwXN30X3
-6T5r+bex3PN0yQXWTAZj9hkwoj/jobzN6K5k+gAO8YlPkutrGzhVvFsXpAYoR0HN+MBuyRV573xU
-U6PR58KAM+IBpXtu0vAlqhMK3ufrmc07+3pRXean5Qz2nI9TmkfifZ4XfqvTnGu5GGU4Z44yqrp4
-Hay8srvYmYGhTAsAhRjoAdQnbf//OYkC1NYVBHe3h6EogIUbD4/YYkoUxn6AJZbm2jC7OurlvA=X
-02jj
-
-
-Pablo.SJ.Shen
-Pablo.SJ.Shen@pcalife.com.tw
-@tl@ssi@n0866
-
 SELECT
  'DROP TABLE "jira"."' || a.tablename || '" CASCADE;'
 FROM
@@ -36,14 +21,3 @@ FROM
 WHERE
  schemaname != 'pg_catalog'
 AND schemaname = 'jira';
-
-
-AAABiQ0ODAoPeNqFkstOwzAQRff+CktsYJEo6StppUiUJIvSJ01BArEZ0il16ziR7RT69zgNldoFY
-eexx3PPvfZNAprO8gN1utTpD1reoOvRMFrRluP2yI5JsAuZr8tU21VhKZQHluIa1d6GVLMDBlqW+
-E9nokFqlHXrrMw+UM43z6ZDBQ4Jc6HNqBlkGCzgg+c02aIgi1KmW1AYgcagorFcx3J9kuaZDZqDU
-gyE/RfPxGwKhatjgafB4Xw6jZfhaDg5H8XfBZPH0/RScJYxjeszSzwFxoOigrHVzlaG575IgbMN2
-pW+/iKJEUY5ioKH/lNsjd+8jvU69nwrehm3GxgbuJojvE6tTQyh0ChApJdOTE7evzmhuSgLydR1V
-sbLZBQl8czyOy3H911i1sFlPZefIJgCzXIRLMLhZEVCiafy4pVcy+k1qIsyW+Ycw7wU2vjgtfiLc
-VVNbZEIVSpZcdJ4HC2HNKkvU3Owp7d17ne0TYefxoh6H9Df30V/fZD4ALysITfAzcYPAakA/DAsA
-hRqoM8WinBD+kUmC9yFL8adXiYlxgIUfF29BwaKwK0skTcKqsITjDTuXnA=X02j3
-
