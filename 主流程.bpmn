@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1" />
+    <bpmn:subProcess id="SubProcess_1hlmene" name="公會索引">
+      <bpmn:outgoing>SequenceFlow_1dpacwx</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_0yy35hh" name="自動核保">
+      <bpmn:incoming>SequenceFlow_1dpacwx</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_13a1qwy</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0r7emsi</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="Task_1ug2au4" name="核保照會">
+      <bpmn:incoming>SequenceFlow_0c67hup</bpmn:incoming>
+    </bpmn:subProcess>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0lfdqgq">
+      <bpmn:incoming>SequenceFlow_0r7emsi</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0c67hup</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0mcqi23</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_13a1qwy</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0r7emsi" sourceRef="SubProcess_0yy35hh" targetRef="ExclusiveGateway_0lfdqgq" />
+    <bpmn:sequenceFlow id="SequenceFlow_0c67hup" name="人工核保" sourceRef="ExclusiveGateway_0lfdqgq" targetRef="Task_1ug2au4" />
+    <bpmn:subProcess id="SubProcess_0sglezj" name="承保後的流程">
+      <bpmn:incoming>SequenceFlow_0mcqi23</bpmn:incoming>
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="SequenceFlow_0mcqi23" name="承保" sourceRef="ExclusiveGateway_0lfdqgq" targetRef="SubProcess_0sglezj" />
+    <bpmn:sequenceFlow id="SequenceFlow_1dpacwx" sourceRef="SubProcess_1hlmene" targetRef="SubProcess_0yy35hh" />
+    <bpmn:sequenceFlow id="SequenceFlow_13a1qwy" name="重新自動核保" sourceRef="ExclusiveGateway_0lfdqgq" targetRef="SubProcess_0yy35hh" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="173" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1hlmene_di" bpmnElement="SubProcess_1hlmene" isExpanded="false">
+        <dc:Bounds x="327.5" y="161.5" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_0yy35hh_di" bpmnElement="SubProcess_0yy35hh" isExpanded="false">
+        <dc:Bounds x="507" y="162" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_0cwf46b_di" bpmnElement="Task_1ug2au4">
+        <dc:Bounds x="757" y="162" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0lfdqgq_di" bpmnElement="ExclusiveGateway_0lfdqgq" isMarkerVisible="true">
+        <dc:Bounds x="654" y="177" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="679" y="230" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0r7emsi_di" bpmnElement="SequenceFlow_0r7emsi">
+        <di:waypoint xsi:type="dc:Point" x="607" y="202" />
+        <di:waypoint xsi:type="dc:Point" x="654" y="202" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="630.5" y="180" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0c67hup_di" bpmnElement="SequenceFlow_0c67hup">
+        <di:waypoint xsi:type="dc:Point" x="704" y="202" />
+        <di:waypoint xsi:type="dc:Point" x="757" y="202" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="711" y="180" width="44" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="SubProcess_0sglezj_di" bpmnElement="SubProcess_0sglezj" isExpanded="false">
+        <dc:Bounds x="757" y="324" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0mcqi23_di" bpmnElement="SequenceFlow_0mcqi23">
+        <di:waypoint xsi:type="dc:Point" x="679" y="227" />
+        <di:waypoint xsi:type="dc:Point" x="679" y="364" />
+        <di:waypoint xsi:type="dc:Point" x="757" y="364" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="684" y="289" width="22" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dpacwx_di" bpmnElement="SequenceFlow_1dpacwx">
+        <di:waypoint xsi:type="dc:Point" x="428" y="202" />
+        <di:waypoint xsi:type="dc:Point" x="507" y="202" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="467.5" y="180" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13a1qwy_di" bpmnElement="SequenceFlow_13a1qwy">
+        <di:waypoint xsi:type="dc:Point" x="679" y="177" />
+        <di:waypoint xsi:type="dc:Point" x="679" y="111" />
+        <di:waypoint xsi:type="dc:Point" x="557" y="111" />
+        <di:waypoint xsi:type="dc:Point" x="557" y="162" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="587" y="90" width="66" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
