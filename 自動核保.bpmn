@@ -13,47 +13,19 @@
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="SequenceFlow_1ke30bm" sourceRef="Task_0tuc5r9" targetRef="Task_088nu4u" />
     <bpmn:sequenceFlow id="SequenceFlow_1p2phcz" name="MPG" sourceRef="ExclusiveGateway_0u46e81" targetRef="Task_0tuc5r9" />
-    <bpmn:task id="Task_05ta1a1" name="進件類別判斷">
-      <bpmn:incoming>SequenceFlow_0xhaki8</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1fn3zmb</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_1fn3zmb" sourceRef="Task_05ta1a1" targetRef="ExclusiveGateway_0u46e81" />
-    <bpmn:task id="Task_0q3mi3y" name="資料檢核&#10;(審閱期檢核)">
-      <bpmn:incoming>SequenceFlow_1r1xo22</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_07dfj34</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:exclusiveGateway id="ExclusiveGateway_14790jr">
       <bpmn:incoming>SequenceFlow_0hfjzcu</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1r1xo22</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_0hozg5y</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="SequenceFlow_1r1xo22" name="是" sourceRef="ExclusiveGateway_14790jr" targetRef="Task_0q3mi3y" />
-    <bpmn:task id="Task_0soxr8t" name="是否需要資料檢核">
-      <bpmn:incoming>SequenceFlow_1hr82ci</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0hfjzcu</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0hfjzcu" sourceRef="Task_0soxr8t" targetRef="ExclusiveGateway_14790jr" />
-    <bpmn:task id="Task_179lrfm" name="變更MPG為人工MPG">
-      <bpmn:incoming>SequenceFlow_128jqev</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_01m70hv</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0itioqe" name="紙本件/ E-submission/ 人工MPG/ MPCG" sourceRef="ExclusiveGateway_0u46e81" targetRef="Task_0hz3xlw" />
     <bpmn:sequenceFlow id="SequenceFlow_1am6yyp" sourceRef="Task_001ww9r" targetRef="Task_088nu4u" />
     <bpmn:sequenceFlow id="SequenceFlow_1tu7ziq" sourceRef="Task_0hz3xlw" targetRef="Task_001ww9r" />
-    <bpmn:task id="Task_0y6vha5" name="快照&#10;(LIA and Magnum結果)">
-      <bpmn:incoming>SequenceFlow_04lgx00</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_06zoz99</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Task_1ml06m2" name="照會碼新舊比較">
-      <bpmn:incoming>SequenceFlow_06zoz99</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0ttepcq</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0ttepcq" sourceRef="Task_1ml06m2" targetRef="EndEvent_04vxk21" />
     <bpmn:sequenceFlow id="SequenceFlow_06zoz99" sourceRef="Task_0y6vha5" targetRef="Task_1ml06m2" />
-    <bpmn:task id="Task_069r3xo" name="快照&#10;(LIA and Magnum結果)">
-      <bpmn:incoming>SequenceFlow_02rptfk</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1hojw5f</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_1hojw5f" sourceRef="Task_069r3xo" targetRef="Task_1aedvgr" />
     <bpmn:exclusiveGateway id="ExclusiveGateway_0vcs296">
       <bpmn:incoming>SequenceFlow_1f4uvxz</bpmn:incoming>
@@ -79,28 +51,14 @@
       <bpmn:outgoing>SequenceFlow_1hr82ci</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_1hr82ci" sourceRef="StartEvent_1" targetRef="Task_0soxr8t" />
-    <bpmn:task id="Task_09y6ig2" name="LIA Summary&#10;(公會累計保額)">
-      <bpmn:incoming>SequenceFlow_07dfj34</bpmn:incoming>
-      <bpmn:incoming>SequenceFlow_0hozg5y</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0xhaki8</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0xhaki8" sourceRef="Task_09y6ig2" targetRef="Task_05ta1a1" />
     <bpmn:sequenceFlow id="SequenceFlow_07dfj34" sourceRef="Task_0q3mi3y" targetRef="Task_09y6ig2" />
     <bpmn:sequenceFlow id="SequenceFlow_0hozg5y" name="否" sourceRef="ExclusiveGateway_14790jr" targetRef="Task_09y6ig2" />
-    <bpmn:task id="Task_088nu4u" name="判斷有無照會碼">
-      <bpmn:incoming>SequenceFlow_1ke30bm</bpmn:incoming>
-      <bpmn:incoming>SequenceFlow_1am6yyp</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0itryxp</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:exclusiveGateway id="ExclusiveGateway_0u46e81">
       <bpmn:incoming>SequenceFlow_1fn3zmb</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1p2phcz</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_0itioqe</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_0hz3xlw" name="實繳保費計算&#10;(for P - 11 檢核)">
-      <bpmn:incoming>SequenceFlow_0itioqe</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1tu7ziq</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:serviceTask id="Task_001ww9r" name="Call Magnum(Non TM)">
       <bpmn:incoming>SequenceFlow_1tu7ziq</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1am6yyp</bpmn:outgoing>
@@ -108,10 +66,6 @@
     <bpmn:endEvent id="EndEvent_04vxk21" name="需人工核保">
       <bpmn:incoming>SequenceFlow_0ttepcq</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:task id="Task_1aedvgr" name="寫檔&#10;(euis)">
-      <bpmn:incoming>SequenceFlow_1hojw5f</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0unt5gg</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_0unt5gg" sourceRef="Task_1aedvgr" targetRef="EndEvent_0sqoagi" />
     <bpmn:endEvent id="EndEvent_0sqoagi" name="承保">
       <bpmn:incoming>SequenceFlow_0unt5gg</bpmn:incoming>
@@ -120,6 +74,52 @@
       <bpmn:incoming>SequenceFlow_01m70hv</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_01m70hv" sourceRef="Task_179lrfm" targetRef="EndEvent_0xxy60r" />
+    <bpmn:serviceTask id="Task_09y6ig2" name="LIA Summary&#10;(公會累計保額)">
+      <bpmn:incoming>SequenceFlow_07dfj34</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0hozg5y</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0xhaki8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0q3mi3y" name="資料檢核&#10;(審閱期檢核)">
+      <bpmn:incoming>SequenceFlow_1r1xo22</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_07dfj34</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:scriptTask id="Task_0soxr8t" name="資料檢核判斷">
+      <bpmn:incoming>SequenceFlow_1hr82ci</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0hfjzcu</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_05ta1a1" name="進件類別判斷">
+      <bpmn:incoming>SequenceFlow_0xhaki8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1fn3zmb</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Task_0hz3xlw" name="實繳保費計算&#10;(for P - 11 檢核)">
+      <bpmn:incoming>SequenceFlow_0itioqe</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1tu7ziq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:scriptTask id="Task_088nu4u" name="判斷有無照會碼">
+      <bpmn:incoming>SequenceFlow_1ke30bm</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1am6yyp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0itryxp</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Task_069r3xo" name="快照&#10;(LIA and Magnum結果)">
+      <bpmn:incoming>SequenceFlow_02rptfk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1hojw5f</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0y6vha5" name="快照&#10;(LIA and Magnum結果)">
+      <bpmn:incoming>SequenceFlow_04lgx00</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_06zoz99</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:scriptTask id="Task_179lrfm" name="變更MPG為人工MPG">
+      <bpmn:incoming>SequenceFlow_128jqev</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_01m70hv</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Task_1ml06m2" name="照會碼新舊比較">
+      <bpmn:incoming>SequenceFlow_06zoz99</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ttepcq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1aedvgr" name="寫檔&#10;(euis)">
+      <bpmn:incoming>SequenceFlow_1hojw5f</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0unt5gg</bpmn:outgoing>
+    </bpmn:serviceTask>
     <bpmn:association id="Association_0uvho4s" sourceRef="ExclusiveGateway_0u46e81" targetRef="TextAnnotation_1virhz5" />
     <bpmn:association id="Association_1e24y23" sourceRef="ExclusiveGateway_0vcs296" targetRef="TextAnnotation_1115vfp" />
     <bpmn:association id="Association_0aolth7" sourceRef="ExclusiveGateway_0rz5le8" targetRef="TextAnnotation_1amrwuf" />
@@ -129,6 +129,9 @@
 </bpmn:textAnnotation>
     <bpmn:textAnnotation id="TextAnnotation_1amrwuf">    <bpmn:text>有無照會碼?</bpmn:text>
 </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_0agyycr">    <bpmn:text>是否需要資料檢核?</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:association id="Association_1pa50d6" sourceRef="ExclusiveGateway_14790jr" targetRef="TextAnnotation_0agyycr" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1ch15wo">
@@ -148,9 +151,6 @@
           <dc:Bounds x="1464" y="551.5" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_088nu4u_di" bpmnElement="Task_088nu4u">
-        <dc:Bounds x="1607" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1ke30bm_di" bpmnElement="SequenceFlow_1ke30bm">
         <di:waypoint xsi:type="dc:Point" x="1544" y="270" />
         <di:waypoint xsi:type="dc:Point" x="1607" y="270" />
@@ -178,9 +178,6 @@
         <di:waypoint xsi:type="dc:Point" x="1377" y="249" />
         <di:waypoint xsi:type="dc:Point" x="1369" y="208" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_05ta1a1_di" bpmnElement="Task_05ta1a1">
-        <dc:Bounds x="1229" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1fn3zmb_di" bpmnElement="SequenceFlow_1fn3zmb">
         <di:waypoint xsi:type="dc:Point" x="1329" y="270" />
         <di:waypoint xsi:type="dc:Point" x="1356" y="270" />
@@ -188,9 +185,6 @@
           <dc:Bounds x="1297.5" y="249" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_0q3mi3y_di" bpmnElement="Task_0q3mi3y">
-        <dc:Bounds x="830" y="432" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_14790jr_di" bpmnElement="ExclusiveGateway_14790jr" isMarkerVisible="true">
         <dc:Bounds x="855" y="293" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -201,12 +195,9 @@
         <di:waypoint xsi:type="dc:Point" x="880" y="343" />
         <di:waypoint xsi:type="dc:Point" x="880" y="432" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="905" y="438" width="11" height="12" />
+          <dc:Bounds x="893" y="383" width="11" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_0soxr8t_di" bpmnElement="Task_0soxr8t">
-        <dc:Bounds x="700" y="278" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0hfjzcu_di" bpmnElement="SequenceFlow_0hfjzcu">
         <di:waypoint xsi:type="dc:Point" x="800" y="318" />
         <di:waypoint xsi:type="dc:Point" x="855" y="318" />
@@ -220,19 +211,13 @@
       <bpmndi:BPMNShape id="TextAnnotation_1amrwuf_di" bpmnElement="TextAnnotation_1amrwuf">
         <dc:Bounds x="1744" y="190" width="105" height="30" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_179lrfm_di" bpmnElement="Task_179lrfm">
-        <dc:Bounds x="1895.8255114320095" y="526.9097472924187" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0hz3xlw_di" bpmnElement="Task_0hz3xlw">
-        <dc:Bounds x="1331" y="432" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0itioqe_di" bpmnElement="SequenceFlow_0itioqe">
         <di:waypoint xsi:type="dc:Point" x="1381" y="295" />
         <di:waypoint xsi:type="dc:Point" x="1381" y="368" />
         <di:waypoint xsi:type="dc:Point" x="1381" y="368" />
         <di:waypoint xsi:type="dc:Point" x="1381" y="432" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1294.5" y="348.50326161855844" width="87" height="36" />
+          <dc:Bounds x="1295" y="349" width="86" height="36" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ServiceTask_1d1w27h_di" bpmnElement="Task_001ww9r">
@@ -274,9 +259,6 @@
           <dc:Bounds x="2281" y="290" width="22" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_1aedvgr_di" bpmnElement="Task_1aedvgr">
-        <dc:Bounds x="2007" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0unt5gg_di" bpmnElement="SequenceFlow_0unt5gg">
         <di:waypoint xsi:type="dc:Point" x="2107" y="267" />
         <di:waypoint xsi:type="dc:Point" x="2274" y="267" />
@@ -284,12 +266,6 @@
           <dc:Bounds x="2145.5" y="246" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_0y6vha5_di" bpmnElement="Task_0y6vha5">
-        <dc:Bounds x="1878" y="390" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_1ml06m2_di" bpmnElement="Task_1ml06m2">
-        <dc:Bounds x="2019" y="390" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0ttepcq_di" bpmnElement="SequenceFlow_0ttepcq">
         <di:waypoint xsi:type="dc:Point" x="2119" y="430" />
         <di:waypoint xsi:type="dc:Point" x="2197" y="430" />
@@ -302,12 +278,9 @@
         <di:waypoint xsi:type="dc:Point" x="1978" y="430" />
         <di:waypoint xsi:type="dc:Point" x="2019" y="430" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1954" y="409" width="90" height="12" />
+          <dc:Bounds x="1953.5" y="409" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_069r3xo_di" bpmnElement="Task_069r3xo">
-        <dc:Bounds x="1847" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1hojw5f_di" bpmnElement="SequenceFlow_1hojw5f">
         <di:waypoint xsi:type="dc:Point" x="1947" y="270" />
         <di:waypoint xsi:type="dc:Point" x="2007" y="270" />
@@ -329,7 +302,7 @@
         <di:waypoint xsi:type="dc:Point" x="1776" y="556" />
         <di:waypoint xsi:type="dc:Point" x="1885" y="467" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1825" y="491" width="11" height="12" />
+          <dc:Bounds x="1824.9998966266685" y="490.9998733965733" width="11" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_128jqev_di" bpmnElement="SequenceFlow_128jqev">
@@ -370,9 +343,9 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_02rptfk_di" bpmnElement="SequenceFlow_02rptfk">
         <di:waypoint xsi:type="dc:Point" x="1787" y="270" />
-        <di:waypoint xsi:type="dc:Point" x="1845" y="270" />
+        <di:waypoint xsi:type="dc:Point" x="1847" y="270" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1804" y="252" width="11" height="12" />
+          <dc:Bounds x="1804.7758620689656" y="252" width="11" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0itryxp_di" bpmnElement="SequenceFlow_0itryxp">
@@ -395,9 +368,6 @@
           <dc:Bounds x="625.5" y="297" width="90" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Task_09y6ig2_di" bpmnElement="Task_09y6ig2">
-        <dc:Bounds x="1053" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0xhaki8_di" bpmnElement="SequenceFlow_0xhaki8">
         <di:waypoint xsi:type="dc:Point" x="1153" y="270" />
         <di:waypoint xsi:type="dc:Point" x="1229" y="270" />
@@ -418,7 +388,7 @@
         <di:waypoint xsi:type="dc:Point" x="880" y="270" />
         <di:waypoint xsi:type="dc:Point" x="1053" y="270" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="922.633064516129" y="242" width="11" height="12" />
+          <dc:Bounds x="923" y="242" width="11" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="EndEvent_0xxy60r_di" bpmnElement="EndEvent_0xxy60r">
@@ -431,8 +401,48 @@
         <di:waypoint xsi:type="dc:Point" x="1996" y="567" />
         <di:waypoint xsi:type="dc:Point" x="2274" y="567" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2135" y="545" width="0" height="13" />
+          <dc:Bounds x="2090" y="545.5" width="90" height="13" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0yip08t_di" bpmnElement="Task_09y6ig2">
+        <dc:Bounds x="1053" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0zn33l4_di" bpmnElement="Task_0q3mi3y">
+        <dc:Bounds x="830" y="432" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1oioh1n_di" bpmnElement="Task_0soxr8t">
+        <dc:Bounds x="700" y="278" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1do6z8u_di" bpmnElement="Task_05ta1a1">
+        <dc:Bounds x="1229" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_121pvsc_di" bpmnElement="Task_0hz3xlw">
+        <dc:Bounds x="1331" y="432" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1bs8s7t_di" bpmnElement="Task_088nu4u">
+        <dc:Bounds x="1607" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1mtq08q_di" bpmnElement="Task_069r3xo">
+        <dc:Bounds x="1847" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0z079i5_di" bpmnElement="Task_0y6vha5">
+        <dc:Bounds x="1878" y="390" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1uktym7_di" bpmnElement="Task_179lrfm">
+        <dc:Bounds x="1896" y="527" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0rjjf23_di" bpmnElement="Task_1ml06m2">
+        <dc:Bounds x="2019" y="390" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1ip91d7_di" bpmnElement="Task_1aedvgr">
+        <dc:Bounds x="2007" y="230" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0agyycr_di" bpmnElement="TextAnnotation_0agyycr">
+        <dc:Bounds x="775.293" y="215.61599999999999" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1pa50d6_di" bpmnElement="Association_1pa50d6">
+        <di:waypoint xsi:type="dc:Point" x="870" y="303" />
+        <di:waypoint xsi:type="dc:Point" x="834" y="246" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
