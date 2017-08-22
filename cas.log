@@ -1,0 +1,12 @@
+017-08-22 20:07:10,404 DEBUG client.validation.Cas20ProxyReceivingTicketValidationFilter:207 Successfully authenticated user: jackson.ja.chen
+2017-08-22 20:07:10,404 DEBUG client.validation.Cas20ProxyReceivingTicketValidationFilter:217 Redirecting after successful ticket validation.
+2017-08-22 20:07:10,405 DEBUG client.util.CommonUtils:328 serverNames=https://vtwlifepolicyadminsit.pru.intranet.asia/InWCommon
+2017-08-22 20:07:10,405 DEBUG client.util.CommonUtils:333 request.getQueryString()=systemId=InWCommon_sit&userId=jackson.ja.chen&ticket=ST-410-WB59q0rYHCiQSezoJnmb-vtwlifeportalsit
+2017-08-22 20:07:10,405 DEBUG client.util.CommonUtils:346 serverName=https://vtwlifepolicyadminsit.pru.intranet.asia/InWCommon
+2017-08-22 20:07:10,405 DEBUG client.util.CommonUtils:365 serviceUrl generated: https://vtwlifepolicyadminsit.pru.intranet.asia/InWCommon/?systemId=InWCommon_sit&userId=jackson.ja.chen
+2017-08-22 20:07:32,102 DEBUG client.util.CommonUtils:388 safeGetParameter called on a POST HttpServletRequest for Restricted Parameters.  Cannot complete check safely.  Reverting to standard behavior for this Parameter
+2017-08-22 20:07:32,103 DEBUG client.util.CommonUtils:388 safeGetParameter called on a POST HttpServletRequest for Restricted Parameters.  Cannot complete check safely.  Reverting to standard behavior for this Parameter
+2017-08-22 20:07:32,109 DEBUG client.session.HashMapBackedSessionMappingStorage:56 Attempting to remove Session=[gxoCxl6CEXvBU7zSYy8Y5VFU9BvnZMe9SXjb8NSX]
+2017-08-22 20:07:32,109 DEBUG client.session.HashMapBackedSessionMappingStorage:62 Found mapping for session.  Session Removed.
+2017-08-22 20:07:32,109 DEBUG client.session.SingleSignOutHandler:304 Invalidating session [gxoCxl6CEXvBU7zSYy8Y5VFU9BvnZMe9SXjb8NSX] for token [ST-410-WB59q0rYHCiQSezoJnmb-vtwlifeportalsit]
+2017-08-22 20:07:32,110 DEBUG client.session.HashMapBackedSessionMappingStorage:56 Attempting to remove Session=[gxoCxl6CEXvBU7zSYy8Y5VFU9BvnZMe9SXjb8NSX]
