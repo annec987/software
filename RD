@@ -1,2 +1,2 @@
-
-docker run -d -p 8080:8080 -p 1521:1521 sath89/oracle-12c
+https://oracle-base.com/articles/misc/using-ref-cursors-to-return-recordsets
+https://enterprisedt.com/publications/oracle/result_set.html
