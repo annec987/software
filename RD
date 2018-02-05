@@ -1,2 +1,7 @@
 https://oracle-base.com/articles/misc/using-ref-cursors-to-return-recordsets
 https://enterprisedt.com/publications/oracle/result_set.html
+
+
+http://www.baeldung.com/global-error-handler-in-a-spring-rest-api
+
+
